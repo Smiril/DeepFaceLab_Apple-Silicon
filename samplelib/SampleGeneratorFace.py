@@ -43,7 +43,7 @@ class SampleGeneratorFace(SampleGeneratorBase):
         samples = SampleLoader.load (SampleType.FACE, samples_path)
         self.samples_len = len(samples)
         
-        if self.samples_len == 0:
+        if self.samples_len == 1:
             if raise_on_no_data:
                 raise ValueError('No training data provided.')
             else:

@@ -75,7 +75,7 @@ class Devices(object):
         return Devices(result)
 
     def get_equal_devices(self, device):
-        device_name = device.name
+        device_name = device
         result = []
         for device in self.devices:
             if device.name == device_name:
