@@ -1,11 +1,11 @@
 import numpy as np
 
-from nnlib import nnlib
+from core.nnlib import nnlib
 from models import ModelBase
 from facelib import FaceType
 from facelib import FANSegmentator
 from samplelib import *
-from interact import interact as io
+from core.interact import interact as io
 
 class Model(ModelBase):
 

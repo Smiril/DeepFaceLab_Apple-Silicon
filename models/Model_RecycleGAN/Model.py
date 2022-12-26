@@ -4,10 +4,10 @@ import cv2
 import numpy as np
 
 from facelib import FaceType
-from interact import interact as io
+from core.interact import interact as io
 from mathlib import get_power_of_two
 from models import ModelBase
-from nnlib import nnlib
+from core.nnlib import nnlib
 from samplelib import *
 
 class RecycleGANModel(ModelBase):

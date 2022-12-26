@@ -1,12 +1,12 @@
 import numpy as np
 
-from nnlib import nnlib
+from core.nnlib import nnlib
 from models import ModelBase
 from facelib import FaceType
 from facelib import PoseEstimator
 from samplelib import *
-from interact import interact as io
-import imagelib
+from core.interact import interact as io
+import core.imagelib
 
 class Model(ModelBase):
 
