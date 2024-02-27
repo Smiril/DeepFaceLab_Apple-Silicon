@@ -22,6 +22,7 @@ https://arxiv.org/abs/2005.05535</a>
 ![](doc/logo_tensorflow.png)
 ![](doc/logo_cuda.png)
 ![](doc/logo_directx.png)
+![](doc/IMG_0326.jpeg)
 
 </p>
 
