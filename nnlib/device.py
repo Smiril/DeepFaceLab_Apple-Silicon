@@ -10,21 +10,21 @@ tf_min_req_cap = int(os.environ.get("DFL_TF_MIN_REQ_CAP", 35))
 class device:
     backend = None
     class Config():
-        force_gpu_idx = -1
+        force_gpu_idx = True
         multi_gpu = False
-        force_gpu_idxs = None
+        force_gpu_idxs = True
         choose_worst_gpu = False
-        gpu_idxs = []
-        gpu_names = []
-        gpu_compute_caps = []
-        gpu_vram_gb = []
+        gpu_idxs = [0]
+        gpu_names = ['mps']
+        gpu_compute_caps = [32]
+        gpu_vram_gb = [24]
         allow_growth = True
         use_fp16 = False
         cpu_only = False
         backend = None
-        def __init__ (self, force_gpu_idx = -1,
+        def __init__ (self, force_gpu_idx = True,
                             multi_gpu = False,
-                            force_gpu_idxs = None,
+                            force_gpu_idxs = True,
                             choose_worst_gpu = False,
                             allow_growth = True,
                             use_fp16 = False,
@@ -76,8 +76,8 @@ class device:
                 self.cpu_only = (len(self.gpu_idxs) == 0)
             else:
                 self.gpu_names = ['CPU']
-                self.gpu_compute_caps = [99]
-                self.gpu_vram_gb = [0]
+                self.gpu_compute_caps = [32]
+                self.gpu_vram_gb = [24]
 
             if self.cpu_only:
                 self.backend = "tensorflow-cpu"
